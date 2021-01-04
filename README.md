@@ -15,6 +15,7 @@ Implementation of the above- mentioned interfaces includes but not limited to th
 o	User (default.json)
 o	Password  (default.json) – encrypted.
 
+
 	NewTransaction (Inserts new transaction/study record in transactions table, initiating unique id. Algorithm includes verification of the duplicate transactions vs transactions table in LITE DB. If within duplicatesEliminateInterval = 600000; // 10 minutes a successful transaction, matching basic parameters of this transaction, was found, the response includes the following error code   - ERROR_00051101 = "DICOM/DCMTK inbound duplicate record" or similar)
 -	Bearer Token
 -	Input Paremeters: String instanceUid, String connectionName, String patientMrn, String accessionNumber,	String studyUid, String seriesUid, String sopUid
