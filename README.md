@@ -65,3 +65,26 @@ o	Password  (default.json) – encrypted.
                      String patientMrn, String accessionNumber, hl7Status (init, success, failure, fatal), 
                      String errorCode, String errorMessage, String hl7Timestamp ("YYYY-MM-DD HH:mm:SS"), int retryAttemps
                      
+ UpdateHL7 (Updates hl7 record in LITE hl7 table passing unique id as an argument. If operation fails hl7Status=”failure”, errorCode and errorMessage to be provided in the body. If operation failed after max number of the allowed retry attempts than hl7Status=”fatal”. Number of the retry attempts is reported in retryAttempt parameter.)
+- Token (see above)
+- PUT localhost:8080/li/lite/ws/hl7/{id}
+-	Input Paremeters:  Strng instanceUid, String organizationCode, String serviceName, String coonectionName,
+                     String patientMrn, String accessionNumber, hl7Status (init), 
+                     String errorCode, String errorMessage, String hl7Timestamp (null),int retryAttemps (0)
+-	Output Paremeters: long id, Strng instanceUid, String organizationCode, String serviceName, String coonectionName,
+                     String patientMrn, String accessionNumber, hl7Status (init, success, failure, fatal), 
+                     String errorCode, String errorMessage, String hl7Timestamp ("YYYY-MM-DD HH:mm:SS"), int retryAttemps
+                     
+	getTransactions (Retrieves list of the studies/transactions from transactions table of LITE DB, that match input parameters.)
+- Token (see above)
+- GET localhost:8080/li/lite/ws/transactions
+-	Input Paremeters:  Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
+                     String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, transStatus (init), 
+                     String errorCode, String errorMessage, String transStarted (null), String transFinished (null),
+                     int retryAttemps
+  -	Output Paremeters List of Objects:
+                     long id, Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
+                     String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, transStatus (init, success, failure, fatal), 
+                     String errorCode, String errorMessage, String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"),
+                     int retryAttemps                  
+                     
