@@ -1,3 +1,35 @@
+# Implementing Hibernate with Spring Boot and PostgreSQL
+
+This repository contains the code for this 
+
+## Getting Started
+
+### Prerequisites
+
+
+### Running the Application
+
+1. Clone the repository
+```
+$ git clone https://github.com/
+```
+
+2. Check into the cloned repository
+```
+$ cd java-hibernate-example
+```
+
+3. Install the dependencies and package the application
+```
+$ mvn package
+```
+
+4. Run the API
+```
+mvn spring-boot:run
+```
+
+## Contribution
 
 # LITE-REST-WS-H2-PostgresDB 
 LITE Transactions/HL7 Tracking Interface
@@ -106,5 +138,4 @@ o	Password  (default.json) – encrypted.
 -	Input Paremeters:  Strng instanceUid, String organizationCode, String serviceName, String coonectionName,
                      String emailTo, String emailSubject, String emailText, 
                      String emailTimestamp (null)
-  -	Output Paremeters: "email is sent" or "email failed"                                  
-                     
+  -	Output Paremeters: "email is sent" or "email failed"    
