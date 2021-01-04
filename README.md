@@ -21,7 +21,7 @@ Developer (Alexander Gerner)
                  varchar email_from, varchar email_to, varchar email_subject, varchar email_text, varchar email_timestamp  
 
 
-WS. Implementation includes but not limited to the following methods:
+REST WS mplementation includes but not limited to the following methods:
 
 	GetToken (Generates Bearer session token for the LITE user authenticated by the CLOUD API - tokenExpirationInterval = 3600000 - 1 hour)
 -	POST localhost:8080/user
