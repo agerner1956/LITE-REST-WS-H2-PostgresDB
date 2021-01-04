@@ -4,10 +4,21 @@ LITE Transactions/HL7 Tracking Interface
 
 Developer (Alexander Gerner)
 
-- WS Server (CLOUD Layer): Java 11, Spring Boot 4-4.5.1, Connection Pool Manager: Hibernate, 1-4.199 DBMS: Postgres. 
+- WS Server (CLOUD Layer): Java 11, Spring Boot 4-4.5.1, Connection Pool Manager: Hibernate, 1-4.199 DBMS: PostgreSQL 12. 
 - WS Observer Client (LITE Layer):  C#
 
-Implementation of the above- mentioned interfaces includes but not limited to the following methods:
+PostgreSQL 12 
+	Tables
+-	transactions ==> Columns: long id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
+                         varchar trans_direction, int trans_size, varchar patient_mrn, varchar accession_number, 
+                         varchar study_uid, varchar series_uid, varchar sop_uid, varchar trans_status, varchar error_code, varchar error_message,
+                         varchar trans_started, varchar trans_finished, int retry_attempt
+
+-	emails ==> Columns: long id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
+                 varchar email_from, varchar email_to, varchar email_subject, varchar email_text, varchar email_timestamp  
+
+
+WS. Implementation includes but not limited to the following methods:
 
 	GetToken (Generates Bearer session token for the LITE user authenticated by the CLOUD API - tokenExpirationInterval = 3600000 - 1 hour)
 -	POST localhost:8080/user
