@@ -43,4 +43,15 @@ o	Password  (default.json) – encrypted.
                      int retryAttemps
                      
 	getTransactions
-- Token (see above)- GET localhost:8080/li/lite/ws/transactions
+- Token (see above)
+- GET localhost:8080/li/lite/ws/transactions
+-	Input Paremeters:  Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
+                     String patientMrn, String accessionNumebr, String studyUid, String seriesUid, String sopUid, transStatus (init), 
+                     String errorCode, String errorMessage, String transStarted (null), String transFinished (null),
+                     int retryAttemps
+  -	Output Paremeters List of Objects:
+                     long id, Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
+                     String patientMrn, String accessionNumebr, String studyUid, String seriesUid, String sopUid, transStatus (init, success, failure, fatal), 
+                     String errorCode, String errorMessage, String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"),
+                     int retryAttemps                  
+                     
