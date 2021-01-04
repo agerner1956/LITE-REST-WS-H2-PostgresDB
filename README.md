@@ -4,7 +4,7 @@ LITE Transactions/HL7 Tracking Interface
 
 Developer (Alexander Gerner)
 
-- WS Server (CLOUD Layer): Java 11, Spring Boot, Connection Pool Manager: Hibernate, DBMS: Postgres. 
+- WS Server (CLOUD Layer): Java 11, Spring Boot 4-4.5.1, Connection Pool Manager: Hibernate, 1-4.199 DBMS: Postgres. 
 - WS Observer Client (LITE Layer):  C#
 
 Implementation of the above- mentioned interfaces includes but not limited to the following methods:
@@ -20,6 +20,19 @@ o	Password  (default.json) – encrypted.
 
 	NewTransaction (Inserts new transaction/study record in transactions table, initiating unique id. Algorithm includes verification of the duplicate transactions vs transactions table in LITE DB. If within duplicatesEliminateInterval = 600000; // 10 minutes a successful transaction, matching basic parameters of this transaction, was found, the response includes the following error code   - ERROR_00051101 = "DICOM/DCMTK inbound duplicate record" or similar)
 -	Bearer Token
+-	POST localhost:8080/li/lite/ws/transaction
+-	Input Paremeters:  Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
+                     String patientMrn, String accessionNumebr, String studyUid, String seriesUid, String sopUid, transStatus (init), 
+                     String errorCode, String errorMessage, String transStarted (null), String transFinished (null),
+                     int retryAttemps (0)
+-	Output Paremeters: long id, Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
+                     String patientMrn, String accessionNumebr, String studyUid, String seriesUid, String sopUid, transStatus (init, success, failure, fatal), 
+                     String errorCode, String errorMessage, String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"),
+                     int retryAttemps
+                     
+	updateTransaction (Updates transaction/study record in LITE transactions table passing unique id as an argument. If transaction fails transStatus=”failure”, errorCode and errorMessage to be provided in the body. If transaction failed after max number of the allowed retry attempts than transStatus=”fatal”. Number of the retry attempts is reported in retryAttempt parameter.)
+- Token (see above)
+- PUT localhost:8080/li/lite/ws/transaction/{id}
 -	Input Paremeters:  Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
                      String patientMrn, String accessionNumebr, String studyUid, String seriesUid, String sopUid, transStatus (init), 
                      String errorCode, String errorMessage, String transStarted (null), String transFinished (null),
