@@ -11,7 +11,7 @@ This repository contains the code for this
 
 1. Clone the repository
 ```
-$ git clone https://github.com/
+$ git clone https://github.com/agerner1956/LITE-REST-WS-H2-PostgresDB
 ```
 
 2. Check into the cloned repository
