@@ -1,43 +1,39 @@
-# Implementing Hibernate with Spring Boot and PostgreSQL
-
-This repository contains the code for this 
+# LITE-REST-WS-H2-PostgresDB 
+LITE Transactions/HL7 Tracking Interface
 
 ## Getting Started
 
 ### Prerequisites
 
+- WS Server (CLOUD Layer): Java 11, Spring Boot 4-4.5.1, Connection Pool Manager: Hibernate, 1-4.199 DBMS: PostgreSQL 12. 
+- WS Observer Client (LITE Layer):  C#
 
 ### Running the Application
 
-1. Clone the repository
-```
+
+1. cd to local repository
+
+$ cd ../LITE-REST-WS-H2-PostgresDB
+
+2. Clone the repository
+
 $ git clone https://github.com/agerner1956/LITE-REST-WS-H2-PostgresDB
-```
 
-2. Check into the cloned repository
-```
-$ cd java-hibernate-example
-```
+3. git init
 
-3. Install the dependencies and package the application
-```
+4. Install the dependencies and package the application
+
 $ mvn package
-```
 
 4. Run the API
-```
-mvn spring-boot:run
-```
 
-## Contribution
+$mvn spring-boot:run
 
-# LITE-REST-WS-H2-PostgresDB 
-LITE Transactions/HL7 Tracking Interface
+
+
+
 
 Developer (Alexander Gerner)
-
-- WS Server (CLOUD Layer): Java 11, Spring Boot 4-4.5.1, Connection Pool Manager: Hibernate, 1-4.199 DBMS: PostgreSQL 12. 
-- WS Observer Client (LITE Layer):  C#
 
  PostgreSQL 12. Tables.
 -	transactions ==> Columns: id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
