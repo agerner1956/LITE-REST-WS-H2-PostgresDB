@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 13
+Implementation-Title: RestH2PostgresDB
+Implementation-Version: 0.0.1
+Main-Class: com.lifeimage.lite.ws.server.TransactionTrackingApplication
+Created-By: Maven Integration for Eclipse
+
