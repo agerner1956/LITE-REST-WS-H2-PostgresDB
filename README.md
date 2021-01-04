@@ -41,3 +41,6 @@ o	Password  (default.json) – encrypted.
                      String patientMrn, String accessionNumebr, String studyUid, String seriesUid, String sopUid, transStatus (init, success, failure, fatal), 
                      String errorCode, String errorMessage, String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"),
                      int retryAttemps
+                     
+	getTransactions
+- Token (see above)- GET localhost:8080/li/lite/ws/transactions
