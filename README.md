@@ -42,7 +42,7 @@ o	Password  (default.json) – encrypted.
                      String errorCode, String errorMessage, String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"),
                      int retryAttemps
                      
-	getTransactions
+	getTransactions (Retrieves list of the studies/transactions from transactions table of LITE DB, that match input parameters.)
 - Token (see above)
 - GET localhost:8080/li/lite/ws/transactions
 -	Input Paremeters:  Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
