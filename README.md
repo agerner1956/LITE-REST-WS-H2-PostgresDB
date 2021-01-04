@@ -1,6 +1,8 @@
 # LITE-REST-WS-H2-PostgresDB 
 LITE Transactions/HL7 Tracking Interface
 
+Developer (Alexander Gerner)
+
 ## Getting Started
 
 ### Prerequisites
@@ -15,7 +17,7 @@ LITE Transactions/HL7 Tracking Interface
 
 $ cd ../LITE-REST-WS-H2-PostgresDB
 
-2. Clone the repository
+2. Clone the remote repository
 
 $ git clone https://github.com/agerner1956/LITE-REST-WS-H2-PostgresDB
 
@@ -28,12 +30,6 @@ $ mvn package
 4. Run the API
 
 $mvn spring-boot:run
-
-
-
-
-
-Developer (Alexander Gerner)
 
  PostgreSQL 12. Tables.
 -	transactions ==> Columns: id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
