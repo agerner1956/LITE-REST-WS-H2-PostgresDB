@@ -1,9 +1,9 @@
 
-# LITE-REST-WS-H2-PostgresDB
+# LITE-REST-WS-H2-PostgresDB 
 LITE Transactions/HL7 Tracking Interface
 
-•	REST WS Server (CLOUD Layer): Java 11, Spring Boot, Connection Pool Manager: Hibernate, DBMS: Postgres. 
-•	REST WS Observer Client (LITE Layer):  C#
+- WS Server (CLOUD Layer): Java 11, Spring Boot, Connection Pool Manager: Hibernate, DBMS: Postgres. 
+- WS Observer Client (LITE Layer):  C#
 
 Implementation of the above- mentioned interfaces includes but not limited to the following methods:
 
