@@ -1,0 +1,141 @@
+2021-01-03 11:50:28,375 DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2021-01-03 11:50:28,376 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1329 ms
+2021-01-03 11:50:30,059 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-01-03 11:50:30,156 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-01-03 11:50:30,173 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-03 11:50:30,200 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 15 mappings in 'requestMappingHandlerMapping'
+2021-01-03 11:50:30,209 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-01-03 11:50:30,216 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-01-03 11:50:31,800 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-127.0.0.1] Initializing Servlet 'dispatcherServlet'
+2021-01-03 11:50:31,801 DEBUG org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(1)-127.0.0.1] Detected StandardServletMultipartResolver
+2021-01-03 11:50:31,808 DEBUG org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-127.0.0.1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-01-03 11:50:31,808 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-127.0.0.1] Completed initialization in 7 ms
+2021-01-03 11:52:10,892 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] POST "/user", parameters={masked}
+2021-01-03 11:52:10,896 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to public com.lifeimage.lite.ws.server.security.User com.lifeimage.lite.ws.server.controllers.UserController.login(java.lang.String,java.lang.String)
+2021-01-03 11:52:11,005 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-1] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-01-03 11:52:11,006 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] Writing [com.lifeimage.lite.ws.server.security.User@113563e8]
+2021-01-03 11:52:11,014 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed 200 OK
+2021-01-03 11:52:34,714 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] POST "/li/lite/ws/transaction", parameters={}
+2021-01-03 11:52:34,715 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to public com.lifeimage.lite.ws.server.beans.TransactionEntity com.lifeimage.lite.ws.server.controllers.TransactionController.createTransaction(com.lifeimage.lite.ws.server.beans.TransactionEntity)
+2021-01-03 11:52:34,736 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] Read "application/json;charset=UTF-8" to [com.lifeimage.lite.ws.server.beans.TransactionEntity@23f12a40]
+2021-01-03 11:52:34,893 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-3] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-01-03 11:52:34,894 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] Writing [com.lifeimage.lite.ws.server.beans.TransactionEntity@23f12a40]
+2021-01-03 11:52:34,896 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed 200 OK
+2021-01-03 11:52:57,111 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-4] GET "/li/lite/ws/transactions", parameters={}
+2021-01-03 11:52:57,112 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to public java.util.List<com.lifeimage.lite.ws.server.beans.TransactionEntity> com.lifeimage.lite.ws.server.controllers.TransactionController.getTransactions(com.lifeimage.lite.ws.server.beans.TransactionEntity)
+2021-01-03 11:52:57,114 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-4] Read "application/json;charset=UTF-8" to [com.lifeimage.lite.ws.server.beans.TransactionEntity@783bc470]
+2021-01-03 11:52:57,124 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-01-03 11:52:57,125 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-4] Writing [[com.lifeimage.lite.ws.server.beans.TransactionEntity@72fd7bf0, com.lifeimage.lite.ws.server.beans.T (truncated)...]
+2021-01-03 11:52:57,130 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Completed 200 OK
+2021-01-03 11:53:50,232 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] PUT "/li/lite/ws/transaction/7", parameters={}
+2021-01-03 11:53:50,233 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-5] Mapped to public org.springframework.http.ResponseEntity<com.lifeimage.lite.ws.server.beans.TransactionEntity> com.lifeimage.lite.ws.server.controllers.TransactionController.updateTransaction(java.lang.Long,com.lifeimage.lite.ws.server.beans.TransactionEntity) throws java.lang.Exception
+2021-01-03 11:53:50,246 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] Read "application/json;charset=UTF-8" to [com.lifeimage.lite.ws.server.beans.TransactionEntity@1d9132ba]
+2021-01-03 11:53:50,273 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-5] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-01-03 11:53:50,273 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-5] Writing [com.lifeimage.lite.ws.server.beans.TransactionEntity@5b1a87ab]
+2021-01-03 11:53:50,274 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-5] Completed 200 OK
+2021-01-03 11:54:26,997 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-6] PUT "/li/lite/ws/transaction/40", parameters={}
+2021-01-03 11:54:26,998 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-6] Mapped to public org.springframework.http.ResponseEntity<com.lifeimage.lite.ws.server.beans.TransactionEntity> com.lifeimage.lite.ws.server.controllers.TransactionController.updateTransaction(java.lang.Long,com.lifeimage.lite.ws.server.beans.TransactionEntity) throws java.lang.Exception
+2021-01-03 11:54:26,999 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-6] Read "application/json;charset=UTF-8" to [com.lifeimage.lite.ws.server.beans.TransactionEntity@d46f1d8]
+2021-01-03 11:54:27,003 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-6] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-01-03 11:54:27,004 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-6] Writing [com.lifeimage.lite.ws.server.beans.TransactionEntity@784ee585]
+2021-01-03 11:54:27,005 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-6] Completed 200 OK
+2021-01-03 19:20:40,992 DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2021-01-03 19:20:40,994 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1432 ms
+2021-01-03 19:20:42,834 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-01-03 19:20:42,936 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-01-03 19:20:42,952 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-03 19:20:42,981 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 15 mappings in 'requestMappingHandlerMapping'
+2021-01-03 19:20:42,990 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-01-03 19:20:42,998 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-01-03 19:20:43,265 ERROR org.apache.juli.logging.DirectJDKLog [main] Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:227)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:263)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:195)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:296)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.lifeimage.lite.ws.server.TransactionTrackingApplication.main(TransactionTrackingApplication.java:24)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:469)
+	at java.base/sun.nio.ch.Net.bind(Net.java:458)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:220)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:88)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:230)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:213)
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1124)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1210)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:585)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005)
+	... 14 common frames omitted
+2021-01-03 19:20:43,278 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2021-01-03 19:22:01,194 DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2021-01-03 19:22:01,195 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1337 ms
+2021-01-03 19:22:02,720 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-01-03 19:22:02,834 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-01-03 19:22:02,849 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-03 19:22:02,876 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 15 mappings in 'requestMappingHandlerMapping'
+2021-01-03 19:22:02,885 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-01-03 19:22:02,893 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-01-03 19:22:05,014 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-127.0.0.1] Initializing Servlet 'dispatcherServlet'
+2021-01-03 19:22:05,015 DEBUG org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(1)-127.0.0.1] Detected StandardServletMultipartResolver
+2021-01-03 19:22:05,023 DEBUG org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-127.0.0.1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-01-03 19:22:05,023 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-127.0.0.1] Completed initialization in 8 ms
+2021-01-03 19:22:16,702 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] POST "/user", parameters={masked}
+2021-01-03 19:22:16,707 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to public com.lifeimage.lite.ws.server.security.User com.lifeimage.lite.ws.server.controllers.UserController.login(java.lang.String,java.lang.String)
+2021-01-03 19:22:16,796 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-1] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-01-03 19:22:16,797 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] Writing [com.lifeimage.lite.ws.server.security.User@5319635]
+2021-01-03 19:22:16,804 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed 200 OK
+2021-01-03 19:22:49,318 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] POST "/li/lite/ws/transaction", parameters={}
+2021-01-03 19:22:49,320 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to public com.lifeimage.lite.ws.server.beans.TransactionEntity com.lifeimage.lite.ws.server.controllers.TransactionController.createTransaction(com.lifeimage.lite.ws.server.beans.TransactionEntity)
+2021-01-03 19:22:49,340 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] Read "application/json;charset=UTF-8" to [com.lifeimage.lite.ws.server.beans.TransactionEntity@31f088c8]
+2021-01-03 19:36:14,214 DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2021-01-03 19:36:14,215 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1430 ms
+2021-01-03 19:36:16,037 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2021-01-03 19:36:16,166 DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2021-01-03 19:36:16,185 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-03 19:36:16,213 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMethodMapping [main] 15 mappings in 'requestMappingHandlerMapping'
+2021-01-03 19:36:16,223 DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2021-01-03 19:36:16,231 DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2021-01-03 19:36:17,144 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-127.0.0.1] Initializing Servlet 'dispatcherServlet'
+2021-01-03 19:36:17,145 DEBUG org.springframework.web.servlet.DispatcherServlet [RMI TCP Connection(1)-127.0.0.1] Detected StandardServletMultipartResolver
+2021-01-03 19:36:17,153 DEBUG org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-127.0.0.1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2021-01-03 19:36:17,153 INFO org.springframework.web.servlet.FrameworkServlet [RMI TCP Connection(1)-127.0.0.1] Completed initialization in 8 ms
+2021-01-03 19:37:23,400 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] POST "/user", parameters={masked}
+2021-01-03 19:37:23,405 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-1] Mapped to public com.lifeimage.lite.ws.server.security.User com.lifeimage.lite.ws.server.controllers.UserController.login(java.lang.String,java.lang.String)
+2021-01-03 19:37:23,488 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-1] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-01-03 19:37:23,490 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-1] Writing [com.lifeimage.lite.ws.server.security.User@2996526f]
+2021-01-03 19:37:23,497 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed 200 OK
+2021-01-03 19:37:39,472 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] POST "/user", parameters={masked}
+2021-01-03 19:37:39,473 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-3] Mapped to public com.lifeimage.lite.ws.server.security.User com.lifeimage.lite.ws.server.controllers.UserController.login(java.lang.String,java.lang.String)
+2021-01-03 19:37:39,475 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-3] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-01-03 19:37:39,475 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-3] Writing [com.lifeimage.lite.ws.server.security.User@550657f5]
+2021-01-03 19:37:39,476 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed 200 OK
+2021-01-03 19:37:59,086 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-4] POST "/li/lite/ws/transaction", parameters={}
+2021-01-03 19:37:59,087 DEBUG org.springframework.web.servlet.handler.AbstractHandlerMapping [http-nio-8080-exec-4] Mapped to public com.lifeimage.lite.ws.server.beans.TransactionEntity com.lifeimage.lite.ws.server.controllers.TransactionController.createTransaction(com.lifeimage.lite.ws.server.beans.TransactionEntity)
+2021-01-03 19:37:59,107 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-4] Read "application/json;charset=UTF-8" to [com.lifeimage.lite.ws.server.beans.TransactionEntity@594bc106]
+2021-01-03 19:38:49,944 DEBUG org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor [http-nio-8080-exec-4] Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2021-01-03 19:38:49,945 DEBUG org.springframework.core.log.LogFormatUtils [http-nio-8080-exec-4] Writing [com.lifeimage.lite.ws.server.beans.TransactionEntity@594bc106]
+2021-01-03 19:38:49,946 DEBUG org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-4] Completed 200 OK
