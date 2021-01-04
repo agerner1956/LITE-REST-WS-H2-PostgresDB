@@ -42,14 +42,14 @@ o	Password  (default.json) – encrypted.
                      String errorCode, String errorMessage, String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"),
                      int retryAttemps
                      
-	getTransactions (Retrieves list of the studies/transactions from transactions table of LITE DB, that match input parameters.)
+	getTransactions (Retrieves list of the studies/transactions from transactions table, that match input parameters.)
 - Token (see above)
 - GET localhost:8080/li/lite/ws/transactions
 -	Input Paremeters:  Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
                      String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, transStatus (init), 
                      String errorCode, String errorMessage, String transStarted (null), String transFinished (null),
                      int retryAttemps
-  -	Output Paremeters List of Objects:
+-	Output Paremeters List of Objects:
                      long id, Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
                      String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, transStatus (init, success, failure, fatal), 
                      String errorCode, String errorMessage, String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"),
@@ -75,16 +75,14 @@ o	Password  (default.json) – encrypted.
                      String patientMrn, String accessionNumber, hl7Status (init, success, failure, fatal), 
                      String errorCode, String errorMessage, String hl7Timestamp ("YYYY-MM-DD HH:mm:SS"), int retryAttemps
                      
-	getTransactions (Retrieves list of the studies/transactions from transactions table of LITE DB, that match input parameters.)
+	getTransactions (Retrieves list of the hl7 records from hl7 table, that match input parameters.)
 - Token (see above)
-- GET localhost:8080/li/lite/ws/transactions
--	Input Paremeters:  Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
-                     String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, transStatus (init), 
-                     String errorCode, String errorMessage, String transStarted (null), String transFinished (null),
-                     int retryAttemps
+- GET localhost:8080/li/lite/ws/hl7s
+-	Input Paremeters:  Strng instanceUid, String organizationCode, String serviceName, String coonectionName,
+                     String patientMrn, String accessionNumber, hl7Status (init), 
+                     String errorCode, String errorMessage, String hl7Timestamp (null),int retryAttemps (0)
   -	Output Paremeters List of Objects:
-                     long id, Strng instanceUid, String organizationCode, String serviceName, String coonectionName, String transDirection, int transSize,
-                     String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, transStatus (init, success, failure, fatal), 
-                     String errorCode, String errorMessage, String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"),
-                     int retryAttemps                  
+                     long id, Strng instanceUid, String organizationCode, String serviceName, String coonectionName,
+                     String patientMrn, String accessionNumber, hl7Status (init, success, failure, fatal), 
+                     String errorCode, String errorMessage, String hl7Timestamp ("YYYY-MM-DD HH:mm:SS"), int retryAttemps             
                      
