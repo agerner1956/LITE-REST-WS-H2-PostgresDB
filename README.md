@@ -8,16 +8,16 @@ Developer (Alexander Gerner)
 - WS Observer Client (LITE Layer):  C#
 
  PostgreSQL 12 Tables
--	transactions ==> Columns: long id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
-                         varchar trans_direction, int trans_size, varchar patient_mrn, varchar accession_number, 
+-	transactions ==> Columns: id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
+                         varchar trans_direction, integer trans_size, varchar patient_mrn, varchar accession_number, 
                          varchar study_uid, varchar series_uid, varchar sop_uid, varchar trans_status, varchar error_code, varchar error_message,
-                         varchar trans_started, varchar trans_finished, int retry_attempt
--	hl7s ==> Columns: long id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
-                         varchar patient_mrn, varchar accession_number, varchar hl7_status, varchar error_code, varchar error_message,
-                         varchar hl7_timestamp, int retry_attempt                       
-                         
+                         varchar trans_started, varchar trans_finished, integer retry_attempt
 
--	emails ==> Columns: long id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
+-	hl7s ==> Columns: id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
+                         varchar patient_mrn, varchar accession_number, varchar hl7_status, varchar error_code, varchar error_message,
+                         varchar hl7_timestamp, integer retry_attempt                       
+                        
+-	emails ==> Columns: id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
                  varchar email_from, varchar email_to, varchar email_subject, varchar email_text, varchar email_timestamp  
 
 
