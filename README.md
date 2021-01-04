@@ -7,7 +7,7 @@ Developer (Alexander Gerner)
 - WS Server (CLOUD Layer): Java 11, Spring Boot 4-4.5.1, Connection Pool Manager: Hibernate, 1-4.199 DBMS: PostgreSQL 12. 
 - WS Observer Client (LITE Layer):  C#
 
- PostgreSQL 12 Tables
+ PostgreSQL 12. Tables.
 -	transactions ==> Columns: id (identity), varchar  instance_uid, varchar organization_code, varchar service_name,varchar connection_name,
                          varchar trans_direction, integer trans_size, varchar patient_mrn, varchar accession_number, 
                          varchar study_uid, varchar series_uid, varchar sop_uid, varchar trans_status, varchar error_code, varchar error_message,
