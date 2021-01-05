@@ -51,7 +51,7 @@ REST WS implementation includes but not limited to the following methods:
 -	POST localhost:8080/user
 -	X-www-form-urlencoded
 -	Body - JSON
--	Input Paremeters: 
+-	Input Parameters: 
 o	User (default.json)
 o	Password  (default.json) – encrypted.
 -  Output Parameters: token (Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiZG9ub3RyZXBseSthbGV4ZGV2MWFnZW50MjAyMDA2MTIwODUzMjlAbGlmZWltYWdlLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2MDk3MjA2NTksImV4cCI6MTYwOTcyNDI1OX0.YW6dYfRpGjobrGsI4rr5nwFm98SQ21IIACGIGaXGf2zB6LYrQMKkjt1e4H7zottrnlsYK_TtwjNRACt2ENv9EQ )
