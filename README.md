@@ -59,23 +59,23 @@ o	Password  (default.json) – encrypted.
 	NewTransaction (Inserts new transaction/study record in transactions table, initiating unique id. Algorithm includes verification of the duplicate transactions vs transactions table. If within duplicatesEliminateInterval = 600000; // 10 minutes a successful transaction, matching basic parameters of this transaction, was found, the response includes the following error code   - ERROR_00051101 = "DICOM/DCMTK inbound duplicate record" or similar)
 -	Bearer Token
 -	POST localhost:8080/li/lite/ws/transaction
--	Input Paremeters:  String instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
+-	Input Parameters:  String instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
                      String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, String transStatus (init), 
                      String errorCode, String errorMessage, String transStarted (null), String transFinished (null),
                      int retryAttemps (0)
--	Output Paremeters: long id, Strng instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
+-	Output Parameters: long id, String instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
                      String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, 
                      String transStatus (init, success, failure, fatal),String errorCode, String errorMessage, 
                      String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"), int retryAttemps
                      
-	updateTransaction (Updates transaction/study record in LITE transactions table passing unique id as an argument. If transaction fails transStatus=”failure”, errorCode and errorMessage to be provided in the body. If transaction failed after max number of the allowed retry attempts than transStatus=”fatal”. Number of the retry attempts is reported in retryAttempt parameter.)
+	updateTransaction (Updates transaction/study record in LITE transactions table passing unique id as an argument. If transaction fails transStatus=”failure”, errorCode and errorMessage to be provided in the body. If transaction failed after max number of the allowed retry attempts then transStatus=”fatal”. Number of the retry attempts is reported in retryAttempt parameter.)
 - Token (see above)
 - PUT localhost:8080/li/lite/ws/transaction/{id}
--	Input Paremeters:  String instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
+-	Input Parameters:  String instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
                      String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, String transStatus (init), 
                      String errorCode, String errorMessage, String transStarted (null), String transFinished (null),
                      int retryAttemps (0)
--	Output Paremeters: long id, Strng instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
+-	Output Parameters: long id, String instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
                      String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, 
                      String transStatus (init, success, failure, fatal),String errorCode, String errorMessage,
                      String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"),int retryAttemps
@@ -83,12 +83,12 @@ o	Password  (default.json) – encrypted.
 	getTransactions (Retrieves list of the studies/transactions from transactions table, that match input parameters.)
 - Token (see above)
 - GET localhost:8080/li/lite/ws/transactions
--	Input Paremeters:  String instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
+-	Input Parameters:  String instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
                      String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid, String transStatus (init), 
                      String errorCode, String errorMessage, String transStarted (null), String transFinished (null),
                      int retryAttemps
--	Output Paremeters List of Objects:
-                     long id, Strng instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
+-	Output Parameters List of Objects:
+                     long id, String instanceUid, String organizationCode, String serviceName, String connectionName, String transDirection, int transSize,
                      String patientMrn, String accessionNumber, String studyUid, String seriesUid, String sopUid,
                      String transStatus (init, success, failure, fatal), String errorCode, String errorMessage, 
                      String transStarted ("YYYY-MM-DD HH:mm:SS"), String transFinished ("YYYY-MM-DD HH:mm:SS"),int retryAttemps                  
@@ -96,38 +96,38 @@ o	Password  (default.json) – encrypted.
 	NewHL7 (Inserts new hl7 record in hl7 table, initiating unique id. Algorithm includes verification of the duplicate hl7 records vs hl7 table. If within duplicatesEliminateInterval = 600000; // 10 minutes a successful hl7 record, matching basic parameters of this record, was found, the response includes the following error code   - ERROR_00052101 = "HL7 inbound duplicate record" or similar)
 -	Bearer Token
 -	POST localhost:8080/li/lite/ws/hl7
--	Input Paremeters:  String instanceUid, String organizationCode, String serviceName, String connectionName,
+-	Input Parameters:  String instanceUid, String organizationCode, String serviceName, String connectionName,
                      String patientMrn, String accessionNumber, String hl7Status (init), 
                      String errorCode, String errorMessage, String hl7Timestamp (null),int retryAttemps (0)
--	Output Paremeters: long id, Strng instanceUid, String organizationCode, String serviceName, String coonectionName,
+-	Output Parameters: long id, String instanceUid, String organizationCode, String serviceName, String coonectionName,
                      String patientMrn, String accessionNumber, String hl7Status (init, success, failure, fatal), 
                      String errorCode, String errorMessage, String hl7Timestamp ("YYYY-MM-DD HH:mm:SS"), int retryAttemps
                      
- UpdateHL7 (Updates hl7 record in LITE hl7 table passing unique id as an argument. If operation fails hl7Status=”failure”, errorCode and errorMessage to be provided in the body. If operation failed after max number of the allowed retry attempts than hl7Status=”fatal”. Number of the retry attempts is reported in retryAttempt parameter.)
+ UpdateHL7 (Updates hl7 record in LITE hl7 table passing unique id as an argument. If operation fails hl7Status=”failure”, errorCode and errorMessage to be provided in the body. If operation failed after max number of the allowed retry attempts then hl7Status=”fatal”. Number of the retry attempts is reported in retryAttempt parameter.)
 - Token (see above)
 - PUT localhost:8080/li/lite/ws/hl7/{id}
 -	Input Paremeters:  String instanceUid, String organizationCode, String serviceName, String connectionName,
                      String patientMrn, String accessionNumber, String hl7Status (init), 
                      String errorCode, String errorMessage, String hl7Timestamp (null),int retryAttemps (0)
--	Output Paremeters: long id, Strng instanceUid, String organizationCode, String serviceName, String connectionName,
+-	Output Paremeters: long id, String instanceUid, String organizationCode, String serviceName, String connectionName,
                      String patientMrn, String accessionNumber, String hl7Status (init, success, failure, fatal), 
                      String errorCode, String errorMessage, String hl7Timestamp ("YYYY-MM-DD HH:mm:SS"), int retryAttemps
                      
 	getTransactions (Retrieves list of the hl7 records from hl7 table, that match input parameters.)
 - Token (see above)
 - GET localhost:8080/li/lite/ws/hl7s
--	Input Paremeters:  String instanceUid, String organizationCode, String serviceName, String connectionName,
+-	Input Parameters:  String instanceUid, String organizationCode, String serviceName, String connectionName,
                      String patientMrn, String accessionNumber, String hl7Status (init), 
                      String errorCode, String errorMessage, String hl7Timestamp (null),int retryAttemps (0)
-  -	Output Paremeters List of Objects:
-                     long id, Strng instanceUid, String organizationCode, String serviceName, String connectionName,
+  -	Output Parameters List of Objects:
+                     long id, String instanceUid, String organizationCode, String serviceName, String connectionName,
                      String patientMrn, String accessionNumber, String hl7Status (init, success, failure, fatal), 
                      String errorCode, String errorMessage, String hl7Timestamp ("YYYY-MM-DD HH:mm:SS"), int retryAttemps             
                      
 	sendEmail (Sends email to the recepient client and initiate correspondent record in email table.)
 - Token (see above)
 - GET localhost:8080/li/lite/ws/hl7s
--	Input Paremeters:  String instanceUid, String organizationCode, String serviceName, String connectionName,
+-	Input Parameters:  String instanceUid, String organizationCode, String serviceName, String connectionName,
                      String emailTo, String emailSubject, String emailText, 
                      String emailTimestamp (null)
   -	Output Paremeters: "email is sent" or "email failed"    
