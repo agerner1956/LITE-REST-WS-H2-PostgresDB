@@ -19,114 +19,127 @@ public class EmailEntity {
    */
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;    
+  private long Id;    
   
   @Column(name = "instance_uid", nullable = true)
-  private String instanceUid;  // property in default.json "username": "donotreply+alexdev1agent20200612085329@lifeimage.com"
+  private String InstanceUid;  // property in default.json "username": "donotreply+alexdev1agent20200612085329@lifeimage.com"
   
   @Column(name = "organization_code", nullable = true)
-  private String organizationCode;  // property in default.json
+  private String OrganizationCode;  // property in default.json
   
   @Column(name = "service_name", nullable = true)
-  private String serviceName;  // property in default.json
+  private String ServiceName;  // property in default.json
   
   @Column(name = "connection_name", nullable = false)
-  private String connectionName; // property in default.json
+  private String ConnectionName; // property in default.json
   
   @Column(name = "email_from", nullable = false)
-  private String emailFrom; 
+  private String EmailFrom; 
   
   @Column(name = "email_to", nullable = false)
-  private String emailTo; 
+  private String EmailTo; 
 
   @Column(name = "email_subject", nullable = false)
-  private String emailSubject; 
+  private String EmailSubject; 
     
   @Column(name = "email_text", nullable = false)
-  private String emailText; 
+  private String EmailText; 
 
   @Column(name = "email_timestamp", nullable = false)
-  private String emailTimestamp;
+  private String EmailTimestamp;
+  
+  @Column(name = "email_status", nullable = false)
+  private String EmailStatus;
 
 public long getId() {
-	return id;
+	return Id;
 }
 
 public void setId(long id) {
-	this.id = id;
+	Id = id;
 }
 
 public String getInstanceUid() {
-	return instanceUid;
+	return InstanceUid;
 }
 
 public void setInstanceUid(String instanceUid) {
-	this.instanceUid = instanceUid;
+	InstanceUid = instanceUid;
 }
 
 public String getOrganizationCode() {
-	return organizationCode;
+	return OrganizationCode;
 }
 
 public void setOrganizationCode(String organizationCode) {
-	this.organizationCode = organizationCode;
+	OrganizationCode = organizationCode;
 }
 
 public String getServiceName() {
-	return serviceName;
+	return ServiceName;
 }
 
 public void setServiceName(String serviceName) {
-	this.serviceName = serviceName;
+	ServiceName = serviceName;
 }
 
 public String getConnectionName() {
-	return connectionName;
+	return ConnectionName;
 }
 
 public void setConnectionName(String connectionName) {
-	this.connectionName = connectionName;
-}
-
-public String getEmailTo() {
-	return emailTo;
-}
-
-public void setEmailTo(String emailTo) {
-	this.emailTo = emailTo;
+	ConnectionName = connectionName;
 }
 
 public String getEmailFrom() {
-	return emailFrom;
+	return EmailFrom;
 }
 
 public void setEmailFrom(String emailFrom) {
-	this.emailFrom = emailFrom;
+	EmailFrom = emailFrom;
+}
+
+public String getEmailTo() {
+	return EmailTo;
+}
+
+public void setEmailTo(String emailTo) {
+	EmailTo = emailTo;
 }
 
 public String getEmailSubject() {
-	return emailSubject;
+	return EmailSubject;
 }
 
 public void setEmailSubject(String emailSubject) {
-	this.emailSubject = emailSubject;
+	EmailSubject = emailSubject;
 }
 
 public String getEmailText() {
-	return emailText;
+	return EmailText;
 }
 
 public void setEmailText(String emailText) {
-	this.emailText = emailText;
+	EmailText = emailText;
 }
 
 public String getEmailTimestamp() {
-	return emailTimestamp;
+	return EmailTimestamp;
 }
 
 public void setEmailTimestamp(String emailTimestamp) {
-	this.emailTimestamp = emailTimestamp;
-} 
+	EmailTimestamp = emailTimestamp;
+}
+
+public String getEmailStatus() {
+	return EmailStatus;
+}
+
+public void setEmailStatus(String emailStatus) {
+	EmailStatus = emailStatus;
+}
+
+
   
   
 

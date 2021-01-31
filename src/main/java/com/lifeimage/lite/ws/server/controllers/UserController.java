@@ -4,12 +4,16 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.lifeimage.lite.ws.server.beans.TransactionEntity;
 import com.lifeimage.lite.ws.server.security.User;
 import com.lifeimage.lite.ws.server.utils.Constants;
 
@@ -20,9 +24,9 @@ import io.jsonwebtoken.SignatureAlgorithm;
 public class UserController {
 
 	@PostMapping("/user")
-	public User login(@RequestParam("user") String username, @RequestParam("password") String encodedString) {
-		
-		  
+	public String login(@RequestParam("user") String username, @RequestParam("password") String encodedString) {
+	
+			  
 	//	Misc ms = new Misc();
 	//	String pwd = ms.decryptPassword(encodedString); 
 	/*	if (!username.equals("alexgerner")) {
@@ -42,10 +46,7 @@ public class UserController {
 		}
 		} */
 		String token = getJWTToken(username);
-		User user = new User();
-		user.setUser(username);
-		user.setToken(token);		
-		return user;
+		return token;
 		
 	}
 
@@ -54,10 +55,10 @@ public class UserController {
 		String secretKey = "mySecretKey";
 		List<GrantedAuthority> grantedAuthorities = AuthorityUtils
 				.commaSeparatedStringToAuthorityList("ROLE_USER");
-		
+		// softtekJWT
 		String token = Jwts
 				.builder()
-				.setId("softtekJWT")
+				.setId(Constants.tokenProvider)
 				.setSubject(username)
 				.claim("authorities",
 						grantedAuthorities.stream()

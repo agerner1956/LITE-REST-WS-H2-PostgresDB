@@ -27,12 +27,12 @@ public class HL7Controller {
 	@Autowired
 	private HL7Repository hl7Repository;
 
-	@GetMapping("/hl7s")
+	@PostMapping("/hl7s")
 	public List<HL7Entity> getHL7s(@Valid @RequestBody HL7Entity hl7) {
 		List<HL7Entity> hl7s = hl7Repository.getHL7s(hl7.getInstanceUid(), hl7.getConnectionName(), hl7.getPatientMrn(),
 				hl7.getAccessionNumber());
 		return hl7s;
-	}
+	} 
 
 	@GetMapping("/hl7/{id}")
 	public ResponseEntity<HL7Entity> getHL7ById(@PathVariable(value = "id") Long hl7Id) throws Exception {

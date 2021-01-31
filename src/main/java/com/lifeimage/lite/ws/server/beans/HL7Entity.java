@@ -16,138 +16,140 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class HL7Entity {
 	  @Id
 	  @GeneratedValue(strategy = GenerationType.IDENTITY)
-	  private long id;    
+	  private long Id;    
 	  
 	  @Column(name = "instance_uid", nullable = true)
-	  private String instanceUid;  // property in default.json "username": "donotreply+alexdev1agent20200612085329@lifeimage.com"
+	  private String InstanceUid;  // property in default.json "username": "donotreply+alexdev1agent20200612085329@lifeimage.com"
 	
 	  @Column(name = "organization_code", nullable = true)
-	  private String organizationCode;  // property in default.json
+	  private String OrganizationCode;  // property in default.json
 	  
 	  @Column(name = "service_name", nullable = true)
-	  private String serviceName;  // property in default.json
+	  private String ServiceName;  // property in default.json
 	  
 	  @Column(name = "connection_name", nullable = false)
-	  private String connectionName; // property in default.json
+	  private String ConnectionName; // property in default.json
 	  
 	  @Column(name = "patient_mrn", nullable = false)
-	  private String patientMrn;  
+	  private String PatientMrn;  
 	  
 	  @Column(name = "accession_number", nullable = false)
-	  private String accessionNumber; 
+	  private String AccessionNumber; 
 	  
 	  @Column(name = "hl7_status", nullable = false)
-	  private String hl7Status;    
+	  private String Hl7Status;    
 
 	  
 	  @Column(name = "error_code", nullable = true)
-	  private String errorCode;    
+	  private String ErrorCode;    
 
 	  @Column(name = "error_message", nullable = true)
-	  private String errorMessage;
+	  private String ErrorMessage;
 	  
 	  @Column(name = "hl7_timestamp", nullable = false)
-	  private String hl7Timestamp;
+	  private String Hl7Timestamp;
 	  
 	  @Column(name = "retry_attempt", nullable = true)
-	  private int retryAttempt;
+	  private int RetryAttempt;
 
-	
 	public long getId() {
-		return id;
+		return Id;
 	}
 
 	public void setId(long id) {
-		this.id = id;
+		Id = id;
 	}
 
 	public String getInstanceUid() {
-		return instanceUid;
+		return InstanceUid;
 	}
 
 	public void setInstanceUid(String instanceUid) {
-		this.instanceUid = instanceUid;
+		InstanceUid = instanceUid;
 	}
 
 	public String getOrganizationCode() {
-		return organizationCode;
+		return OrganizationCode;
 	}
 
 	public void setOrganizationCode(String organizationCode) {
-		this.organizationCode = organizationCode;
+		OrganizationCode = organizationCode;
 	}
 
 	public String getServiceName() {
-		return serviceName;
+		return ServiceName;
 	}
 
 	public void setServiceName(String serviceName) {
-		this.serviceName = serviceName;
+		ServiceName = serviceName;
 	}
 
 	public String getConnectionName() {
-		return connectionName;
+		return ConnectionName;
 	}
 
 	public void setConnectionName(String connectionName) {
-		this.connectionName = connectionName;
+		ConnectionName = connectionName;
 	}
 
 	public String getPatientMrn() {
-		return patientMrn;
+		return PatientMrn;
 	}
 
 	public void setPatientMrn(String patientMrn) {
-		this.patientMrn = patientMrn;
+		PatientMrn = patientMrn;
 	}
 
 	public String getAccessionNumber() {
-		return accessionNumber;
+		return AccessionNumber;
 	}
 
 	public void setAccessionNumber(String accessionNumber) {
-		this.accessionNumber = accessionNumber;
+		AccessionNumber = accessionNumber;
 	}
 
 	public String getHl7Status() {
-		return hl7Status;
+		return Hl7Status;
 	}
 
 	public void setHl7Status(String hl7Status) {
-		this.hl7Status = hl7Status;
+		Hl7Status = hl7Status;
 	}
 
 	public String getErrorCode() {
-		return errorCode;
+		return ErrorCode;
 	}
 
 	public void setErrorCode(String errorCode) {
-		this.errorCode = errorCode;
+		ErrorCode = errorCode;
 	}
 
 	public String getErrorMessage() {
-		return errorMessage;
+		return ErrorMessage;
 	}
 
 	public void setErrorMessage(String errorMessage) {
-		this.errorMessage = errorMessage;
+		ErrorMessage = errorMessage;
 	}
 
 	public String getHl7Timestamp() {
-		return hl7Timestamp;
+		return Hl7Timestamp;
 	}
 
 	public void setHl7Timestamp(String hl7Timestamp) {
-		this.hl7Timestamp = hl7Timestamp;
+		Hl7Timestamp = hl7Timestamp;
 	}
 
 	public int getRetryAttempt() {
-		return retryAttempt;
+		return RetryAttempt;
 	}
 
 	public void setRetryAttempt(int retryAttempt) {
-		this.retryAttempt = retryAttempt;
+		RetryAttempt = retryAttempt;
 	}
+
+	
+	
 
 	
 	

@@ -8,8 +8,10 @@ public class Constants {
 	public static final String statusFailure = "failure";
 	public static final String statusFatal = "fatal";
 	public static final String statusInit = "init";
+	public static final String tokenProvider = "LifeImageJWT";
 	public static final long duplicatesEliminateInterval = 600000; // 10 minutes
 	public static final long tokenExpirationInterval = 3600000; //  1 hour
+	
 	
 	public static final String ERROR_00011000 = "Security";
 	public static final String ERROR_00011100 = "Authentication";

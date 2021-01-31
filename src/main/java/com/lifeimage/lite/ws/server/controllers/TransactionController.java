@@ -32,7 +32,7 @@ public class TransactionController {
 	@Autowired
 	private TransactionRepository transactionRepository;
 	   
-	@GetMapping("/transactions")
+	@PostMapping("/transactions")
 	public List<TransactionEntity> getTransactions(@Valid @RequestBody TransactionEntity transaction) {
 		List<TransactionEntity> transactions = transactionRepository.getTransactions(transaction.getInstanceUid(), transaction.getConnectionName(),transaction.getPatientMrn(),
 				transaction.getAccessionNumber(), transaction.getStudyUid(), transaction.getSeriesUid(), transaction.getSopUid());
